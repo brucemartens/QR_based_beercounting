@@ -1,0 +1,37 @@
+{% load static %}
+
+{% for profile in profiles %}
+
+<div class="col-sm">
+    <div class="my-2"></div>
+<!-- Dropdown Card Example -->
+<div class="card shadow mb-4">
+    <!-- Card Header - Dropdown -->
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary text-center">{{profile.name}}</h6>
+    </div>
+    <!-- Card Body -->
+    <div class="card-body text-center">
+        <img src="{% static 'images/avatar.png' %}" class="rounded" alt="...">
+
+        <h1>{{profile.count}}</h1>
+        <div class="my-2"></div>
+        <a href="#" class="btn btn-success btn-block">
+            <span class="text">Add beer</span>
+        </a>
+        <div class="my-2"></div>
+        <a href="#" class="btn btn-warning btn-block">
+            <span class="icon text-white-50">
+                <i class="fas fa-exclamation-triangle"></i>
+            </span>
+            <span class="text">Subtract beer</span>
+        </a>
+        <div class="my-2"></div>
+        <a href="#" class="btn btn-info btn-block">
+            <span class="text">Get QR</span>
+        </a>
+    </div>
+</div>
+</div>
+
+{% endfor %}
